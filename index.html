@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>저탄소 식단 설계기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 저탄소 식단 설계기</h1>
+            <p>지구를 생각하는 식단을 만들어보세요</p>
+        </header>
+
+        <main>
+            <div class="app-layout">
+                <!-- 음식 카테고리 및 선택 영역 -->
+                <div class="food-selection">
+                    <h2>음식 선택</h2>
+                    
+                    <!-- 카테고리 탭 -->
+                    <div class="category-tabs">
+                        <button class="tab-btn active" data-category="밥류">밥류</button>
+                        <button class="tab-btn" data-category="국류">국류</button>
+                        <button class="tab-btn" data-category="반찬류">반찬류</button>
+                        <button class="tab-btn" data-category="고기/생선류">고기/생선류</button>
+                        <button class="tab-btn" data-category="후식류">후식류</button>
+                        <button class="tab-btn" data-category="패스트푸드류">패스트푸드류</button>
+                    </div>
+
+                    <!-- 음식 목록 -->
+                    <div class="food-grid" id="foodGrid">
+                        <!-- JavaScript로 동적 생성 -->
+                    </div>
+                </div>
+
+                <!-- 선택된 식단 및 결과 영역 -->
+                <div class="meal-display">
+                    <h2>나의 식단</h2>
+                    
+                    <!-- 탄소배출량 총합 -->
+                    <div class="carbon-summary">
+                        <div class="total-carbon">
+                            <span class="carbon-value" id="totalCarbon">0.00</span>
+                            <span class="carbon-unit">kg CO₂e</span>
+                        </div>
+                        <div class="feedback-message" id="feedbackMessage">
+                            식단을 구성해보세요!
+                        </div>
+                    </div>
+
+                    <!-- 선택된 음식 목록 -->
+                    <div class="selected-foods">
+                        <h3>선택된 음식</h3>
+                        <div class="meal-list" id="mealList">
+                            <div class="empty-state">
+                                아직 선택된 음식이 없습니다.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 액션 버튼 -->
+                    <div class="action-buttons">
+                        <button class="btn clear-btn" id="clearMeal">전체 삭제</button>
+                        <button class="btn save-btn" id="saveMeal">식단 저장</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
